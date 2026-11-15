@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TECHNICAL 7 | Aerospace Research &amp; Implementation</title>
+<meta name="description" content="TECHNICAL 7 is an aerospace company focused on rocket propulsion, missile propulsion, jet aircraft propulsion, civilian aircraft, unmanned aircraft systems and satellites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="l-ring"></div>
+    <span class="l-seven">7</span>
+    <p id="loadText">INITIALIZING SYSTEMS</p>
+    <div class="l-bar"><i id="loadBar"></i></div>
+  </div>
+</div>
+
+<div id="progress"></div>
+<div id="glow"></div>
+<canvas id="space"></canvas>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="wrap nav-row">
+    <a href="#home" class="logo"><span class="logo-mark">7</span><span class="logo-text">TECHNICAL<b>7</b></span></a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#divisions">Divisions</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </nav>
+    <button id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="chip reveal">Aerospace &middot; Research &middot; Implementation</span>
+      <h1 class="reveal">
+        <span class="h-line">TECHNICAL</span>
+        <span class="h-line big">SEVEN<em>.</em></span>
+      </h1>
+      <p class="typed-line reveal">We engineer <span id="typed"></span><i class="caret"></i></p>
+      <p class="hero-sub reveal">From the thrust of a rocket engine to the quiet orbit of a satellite, TECHNICAL 7 turns aerospace research into real, flying systems.</p>
+      <div class="cta reveal">
+        <a href="#divisions" class="btn primary">Explore Divisions</a>
+        <a href="#contact" class="btn ghost">Start a Project</a>
+      </div>
+    </div>
+
+    <div class="orbit reveal" aria-hidden="true">
+      <div class="core"><span>7</span></div>
+      <div class="ring r1"><i class="sat"></i></div>
+      <div class="ring r2"><i class="sat"></i></div>
+      <div class="ring r3"><i class="sat"></i></div>
+      <div class="tag t1">Propulsion</div>
+      <div class="tag t2">Flight</div>
+      <div class="tag t3">Orbit</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Rocket Propulsion</span><span>Missile Propulsion</span><span>Jet Engines</span><span>Civilian Aircraft</span><span>Unmanned Systems</span><span>Satellites</span>
+    <span>Rocket Propulsion</span><span>Missile Propulsion</span><span>Jet Engines</span><span>Civilian Aircraft</span><span>Unmanned Systems</span><span>Satellites</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow reveal">About the company</span>
+        <h2 class="reveal">Where research becomes <span class="grad">flight hardware.</span></h2>
+        <p class="lead reveal">TECHNICAL 7 is an aerospace company dedicated to research and implementation across propulsion, aircraft and space systems. We study the physics, design the systems, and work to turn those designs into working technology.</p>
+        <p class="lead reveal">Our work spans six divisions, each with its own set of focus areas, connected by one idea: propulsion and flight are one engineering discipline, and the best systems are designed together.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar tilt reveal"><b>01</b><h4>Research</h4><p>Studying propulsion physics, aerodynamics, materials and flight dynamics.</p></div>
+        <div class="pillar tilt reveal"><b>02</b><h4>Design</h4><p>Modelling and simulation before anything is built, to find problems early.</p></div>
+        <div class="pillar tilt reveal"><b>03</b><h4>Implementation</h4><p>Prototyping, testing and refining designs into dependable systems.</p></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><b data-count="6">0</b><span>Divisions</span></div>
+      <div class="stat reveal"><b id="areaCount" data-count="0">0</b><span>Focus Areas</span></div>
+      <div class="stat reveal"><b data-count="6">0</b><span>Development Stages</span></div>
+      <div class="stat reveal"><b data-count="1">0</b><span>Shared Vision</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVISIONS EXPLORER -->
+<section id="divisions" class="alt">
+  <div class="wrap">
+    <span class="eyebrow reveal">What we work on</span>
+    <h2 class="reveal">Six divisions. <span class="grad">One mission.</span></h2>
+    <p class="lead reveal">Select a division to explore its sub-categories and focus areas.</p>
+
+    <div class="explorer reveal">
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow reveal">How we work</span>
+    <h2 class="reveal">From idea to <span class="grad">operation.</span></h2>
+    <div class="steps">
+      <div class="step reveal"><i>01</i><h4>Research</h4><p>Literature, theory and feasibility studies.</p></div>
+      <div class="step reveal"><i>02</i><h4>Concept</h4><p>Requirements, trade studies and architecture.</p></div>
+      <div class="step reveal"><i>03</i><h4>Simulate</h4><p>CFD, structural and flight-dynamics models.</p></div>
+      <div class="step reveal"><i>04</i><h4>Prototype</h4><p>Build subsystems and integrate them.</p></div>
+      <div class="step reveal"><i>05</i><h4>Test</h4><p>Ground tests, verification and safety review.</p></div>
+      <div class="step reveal"><i>06</i><h4>Deploy</h4><p>Operational support and continuous improvement.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="alt">
+  <div class="wrap">
+    <div class="founder">
+      <div class="avatar reveal">
+        <!-- To use a real photo: replace the span below with <img src="founder.jpg" alt="Vishnu Vardhan Reddy Tangirala"> -->
+        <span>VT</span>
+      </div>
+      <div class="f-copy">
+        <span class="eyebrow reveal">Founder &amp; Owner</span>
+        <h2 class="reveal">Vishnu Vardhan Reddy <span class="grad">Tangirala</span></h2>
+        <p class="lead reveal">Vishnu Vardhan Reddy Tangirala founded TECHNICAL 7 with a single goal: to build a serious aerospace research and implementation company, starting with propulsion and extending to aircraft, unmanned systems and satellites.</p>
+        <blockquote class="reveal">"Every system that flies starts as a question about physics. We exist to answer those questions and build what follows."</blockquote>
+        <small class="reveal edit-note">Edit this quote and paragraph in index.html so they are in the founder's own words.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow reveal">Contact</span>
+      <h2 class="reveal">Let's build what's <span class="grad">next.</span></h2>
+      <p class="lead reveal">Interested in collaborating, partnering, research opportunities or just asking questions? Send a message and we will get back to you.</p>
+      <ul class="contact-list reveal">
+        <li><b>Founder</b> Vishnu Vardhan Reddy Tangirala</li>
+        <li><b>Company</b> TECHNICAL 7</li>
+        <li><b>Sector</b> Aerospace</li>
+      </ul>
+    </div>
+    <form id="form" class="reveal" novalidate>
+      <label>Name<input type="text" id="fName" placeholder="Your full name" required></label>
+      <label>Email<input type="email" id="fEmail" placeholder="you@example.com" required></label>
+      <label>Area of interest<select id="fArea"></select></label>
+      <label>Message<textarea id="fMsg" placeholder="Tell us about your project or question" required></textarea></label>
+      <button type="submit" class="btn primary">Send Message</button>
+      <p id="formStatus" class="form-status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="logo"><span class="logo-mark">7</span><span class="logo-text">TECHNICAL<b>7</b></span></div>
+    <p>&copy; <span id="year"></span> TECHNICAL 7. All rights reserved.</p>
+    <a href="#home" class="to-top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
